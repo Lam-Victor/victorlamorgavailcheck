@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-test('www subdomain navigation site render', async ({ page }) => {
+test('no subdomain navigation site render', async ({ page }) => {
   await page.goto('about:blank');
-  await page.goto('https://www.victorlam.org/');
+  await page.goto('https://victorlam.org/');
   
   //assertions homepage
   await expect(page.getByText('this is Victor Lam. Here')).toBeVisible();
